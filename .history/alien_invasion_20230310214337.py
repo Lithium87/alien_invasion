@@ -79,8 +79,7 @@ class AlienInvasion:
         self.bullets.update()
 
     def _update_aliens(self):
-        """Check if the fleet is at an edge, then update positions."""
-        self._check_fleet_edges()
+        """Update the positions of all aliens in the fleet."""
         self.aliens.update()
 
         # Get rid of bullets that have disappeared.
