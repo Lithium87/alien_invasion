@@ -105,13 +105,6 @@ class AlienInvasion:
         self.bullets.empty()
         self.aliens.empty()
 
-        # Create a new fleet and center the ship.
-        self._create_fleet()
-        self.ship.center_ship()
-
-        # Pause
-        sleep(0.5)
-
     def _update_aliens(self):
         """Check if the fleet is at an edge, then update positions."""
         self._check_fleet_edges()
@@ -119,7 +112,7 @@ class AlienInvasion:
 
         # Look for alien-ship collisions.
         if pygame.sprite.spritecollideany(self.ship, self.aliens):
-            self._hit_ship()
+            print("Ship hit!!!")
 
         # Get rid of bullets that have disappeared.
         for bullet in self.bullets.copy():
