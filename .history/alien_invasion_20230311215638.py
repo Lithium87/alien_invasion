@@ -146,7 +146,6 @@ class AlienInvasion:
             sleep(0.5)
         else:
             self.game_active = False
-            pygame.mouse.set_visible(True)
 
     def _update_aliens(self):
         """Check if the fleet is at an edge, then update positions."""
