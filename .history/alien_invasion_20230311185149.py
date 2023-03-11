@@ -121,9 +121,6 @@ class AlienInvasion:
         if pygame.sprite.spritecollideany(self.ship, self.aliens):
             self._hit_ship()
 
-        # Look for aliens hitting the bottom of the screen.
-        self._check_aliens_bottom()
-
         # Get rid of bullets that have disappeared.
         for bullet in self.bullets.copy():
             if bullet.rect.bottom <= 0:
